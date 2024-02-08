@@ -15,24 +15,21 @@ const showTable = () => {
     // Crear una tabla HTML
     const table = document.createElement("table");
     // Agregar una fila de encabezado a la tabla:  n° | multiplicación | factorial
-    table.innerHTML =
-      "<tr><th>n°</th><th>multiplicacion</th><th>factorial</th></tr>";
+    table.innerHTML = "<tr><th>Multiplicación</th><th>Factorial</th></tr>";
 
     // Llenar tabla con datos
     for (let i = 1; i <= numberInput; i++) {
       const row = table.insertRow();
       const cell1 = row.insertCell(0);
       const cell2 = row.insertCell(1);
-      const cell3 = row.insertCell(2);
 
      // Agregar datos a las celdas
-      cell1.textContent = i;
-      cell2.textContent = `${i} * ${numberInput} = ${i * numberInput}`;
-      cell3.textContent = `${calculateFactorial(i)}`;
+      cell1.textContent = `${i} * ${numberInput} = ${i * numberInput}`;
+      cell2.textContent = `${calculateFactorial(i)}`;
 
       // Mostrar fila en la consola
       console.log(
-        `${i} | ${i} * ${numberInput} = ${i * numberInput} | ${calculateFactorial(i)}`
+        `${i} * ${numberInput} = ${i * numberInput} | ${calculateFactorial(i)}`
       );
     }
 
@@ -61,6 +58,18 @@ const calculateFactorial = (num) => {
     factorialString += `${i}${i !== num ? ' * ' : ' = '}`;
   }
 
-  factorialString += factorial;
+  // Formatear el resultado con puntos
+  factorialString += formatNumberWithPoints(factorial);
+
   return factorialString;
 };
+
+// Función para formatear un número con puntos
+const formatNumberWithPoints = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+};
+
+document.getElementById("form").addEventListener("submit", function (event) {
+  event.preventDefault();
+  showTable();
+});

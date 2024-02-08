@@ -1,5 +1,8 @@
 # Desafío - Multiplicación
 
+![](./assets/images/desktop.png)
+![](./assets/images/mobile.png)
+
 En este desafío validaremos nuestros conocimientos de funciones, ECMAScript 6 (ES6) y Ciclos.
 
 ## Descripción

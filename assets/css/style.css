@@ -1,0 +1,73 @@
+:root {
+    /* colors */
+    --clr-primary: #C5E4E7;
+    --clr-secondary: #00474A;
+    --clr-tertiary: ##26C1AD;
+    --clr-nt-white: #FFFFFF;
+    --clr-nt-light: #F2F9FB;
+    /* fonts */
+    --ff-primary: 'Montserrat', sans-serif;
+    /* Font size */
+    --fs-h1: 3.31rem;
+    --fs-h2: 1.688rem;
+    /* font weight */
+    --fw-500: 500;
+    --fw-700: 700;
+    /* letter spacing */
+    --ls-h1: 0.084em;
+    --ls-h2: 0.07em;
+    /* border radius */
+    --br-1: 1.875rem;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-500);
+    background-color: var(--clr-primary);
+    color: var(--clr-secondary);
+    display: grid;
+    justify-content: center;
+
+    min-height: 100dvh;
+}
+
+/* container */
+
+header,
+main,
+footer {
+    max-width: 1000px;
+}
+
+/* header */
+header h1 {
+    font-size: clamp(1rem, 8vw, var(--fs-h1));
+    font-weight: var(--fw-700);
+    text-align: center;
+    margin-top: clamp(2rem, 15vw, 4rem);
+    margin-bottom: 0.875rem;
+    letter-spacing: 5.25px;
+}
+
+header h2 {
+    font-size: clamp(1rem, 6vw, var(--fs-h2));
+    text-align: center;
+    letter-spacing: var(--ls-h2);
+    margin-bottom: 3rem;
+}
+
+
+
+
+
+.instructions ol {
+    list-style-position: inside;
+ 
+}

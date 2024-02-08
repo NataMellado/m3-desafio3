@@ -39,10 +39,9 @@ const showTable = () => {
     // Una vez finalizado el ciclo agregar tabla al contenedor
     tableContainer.appendChild(table);
 
-    // Si el numero no es válido mostrar mensaje en consola y en el contenedor
+    // Si el numero no es válido mostrar mensaje en consola
   } else {
     console.log("Número fuera del rango (1-20)");
-    tableContainer.innerHTML = "<p>Número fuera del rango (1-20)</p>";
   }
 };
 
@@ -56,9 +55,12 @@ const validateNumber = (number) => {
 const calculateFactorial = (num) => {
   let factorial = 1;
   let factorialString = `${num}! = `;
-  for (let i = 1; i <= num; i++) {
+
+   for (let i = 1; i <= num; i++) {
     factorial *= i;
-    factorialString += i !== num ? `${i} * ` : `${i} = ${factorial}`;
+    factorialString += `${i}${i !== num ? ' * ' : ' = '}`;
   }
+
+  factorialString += factorial;
   return factorialString;
 };

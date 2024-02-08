@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplicación</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Multiplicación y factorial</h1>
+  </header>
+  <main>
+
+    <article>
+        <h2>Instrucciones:</h2>
+        <ol>
+            <li>Ingresa un número entre 1 y 20.</li>
+            <li>Haz clic en el botón "Calcular".</li>
+            <li>El programa te proporcionará las tablas de multiplicar desde 1 hasta el número ingresado, así como los factoriales de esos mismos números.</li>
+            <li>Observa los resultados en la consola del navegador para ver las operaciones realizadas.</li>
+        </ol>
+    </article>
+
+    <form id="form">
+      <label for="numberInput">Ingrese un número entre 1 y 20</label>
+      <input type="number" id="numberInput" min="1" max="20">
+      <button type="button" onclick="showTable()">Calcular</button>
+    </form>
+
+    <div id="tableContainer"></div>
+
+  </main>
+
+
+  <footer>
+    <p>Desarrollado por</p>
+    <a href="https://github.com/NataMellado" target="_blank">Nata</a>
+  </footer>
+
+
+  <script src="./assets/js/script.js"></script>
+</body>
+</html>
+
